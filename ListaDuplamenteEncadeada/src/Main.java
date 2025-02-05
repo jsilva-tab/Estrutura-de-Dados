@@ -91,6 +91,15 @@ class Deque{
         }
         System.out.println();
     }
+
+    public void reverso() {
+    	No atual = fim;
+    	while(atual!=null){
+    		System.out.print(atual.valor+" ");
+    		atual = atual.anterior;
+    	}
+    	System.out.println();
+    }
 }
 
 public class Main{
@@ -103,6 +112,8 @@ public class Main{
         deque.inserirInicio(2);
 
         deque.imprimir();
+
+        deque.reverso();
 
         System.out.println("Removido do início: "+deque.removerInicio());
         System.out.println("Removido do fim: "+deque.removerFim());
